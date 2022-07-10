@@ -1,4 +1,4 @@
-image: java:14
+image: java:8
 
 stages:
   - build
@@ -17,7 +17,6 @@ build-job:
 #  stage: check-code
 #  artifacts:
 #    paths: [gl-code-quality-report.json]
-
 
 test-job:
   stage: test
