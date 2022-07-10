@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application form</title>
+</head>
+<body>
+
+<script>
+    function sendForm(){
+        alert("Form submitted!");
+    }
+</script>
+
+<form onsubmit="sendForm()">
+    <label for="username">Username</label></br>
+    <input type="text" id="username" name="username"/></br>
+    <label for="email">Email</label></br>
+    <input type="email" id="email" name="email"/></br>
+
+    <input type="radio" id="male" name="sex">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="sex">
+    <label for="female">Female</label></br>
+
+    <input type="checkbox" id="loveCats" name="loveCats">
+    <label for="loveCats">Love cats</label>
+    <input type="checkbox" id="loveDogs" name="loveDogs">
+    <label for="loveDogs">Love dogs</label></br>
+
+    <input type="submit" value="SEND">
+</form>
+
+</body>
+</html>
