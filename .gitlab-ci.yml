@@ -18,6 +18,7 @@ build-job:
 #  artifacts:
 #    paths: [gl-code-quality-report.json]
 
+
 test-job:
   stage: test
   script: ./mvnw test
