@@ -1,0 +1,35 @@
+image: java:14
+
+stages:
+  - build
+#  - check-code
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  script: ./mvnw package
+  artifacts:
+    paths:
+      - target/HW-5_Tests-1.0-SNAPSHOT.jar
+
+#check-code-job:
+#  stage: check-code
+#  artifacts:
+#    paths: [gl-code-quality-report.json]
+
+test-job:
+  stage: test
+  script: ./mvnw test
+  artifacts:
+    paths:
+      - target/HW-5_Tests-1.0-SNAPSHOT.jar
+
+deploy-job:
+  stage: deploy
+  script: mvn deploy
+#    -s ci_settings.xml
+  only:
+    - main
+#   include:
+#     - template: Jobs/Code-Quality.gitlab-ci.yml
